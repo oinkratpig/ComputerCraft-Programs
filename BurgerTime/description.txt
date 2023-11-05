@@ -1,0 +1,5 @@
+Mining turtle
+========================
+
+Turns out they can't craft modded recipes. Oops. Did all this before I learned that.
+Was supposed to be used to automate burger crafting with Farmer's Delight.

@@ -118,9 +118,9 @@ end
 
 -- Get length and size of quarry from user
 write("Quarry side length: ")
-quarrySize = read()
+quarrySize = tonumber(read())
 write("Quarry distance: ")
-quarryLength = read()
+quarryLength = tonumber(read())
 length = quarrySize * 2 + 1
 print("Digging " .. length .. "x" .. length .. " quarry " .. quarryLength .. " blocks down.")
 -- Position for digging
@@ -129,4 +129,5 @@ Move(-quarrySize, -quarrySize)
 for i = 1, quarryLength, 1 do
 	PrepareDig()
 	DigSquare()
+	print("Dug square. " .. quarryLength - i .. " left.")
 end

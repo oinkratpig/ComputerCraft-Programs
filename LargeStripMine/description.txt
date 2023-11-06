@@ -1,0 +1,4 @@
+Mining turtle
+========================
+
+Mines a strip mine forward a set distance.

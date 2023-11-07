@@ -10,7 +10,7 @@ farmHeight = 9
 barrelOffsetX = 4
 barrelOffsetY = 4
 -- Seconds between harvesting
-cooldown = 30
+cooldown = 90
 
 x = 0 -- Left/right offset relative to home position (Higher = right)
 y = 0 -- Forward/back offset (Higher = forward)

@@ -186,7 +186,9 @@ while true do
         for fy = 1, farmHeight, 1 do
             print("Harvesting row " .. fy .. ".")
             for fx = 1, farmWidth - 1, 1 do
-                turtle.suckDown()
+                if x ~= barrelOffsetX and y ~= barrelOffsetY then
+                    turtle.suckDown()
+                end
                 HarvestCrop()
                 if not flip then
                     Move(1, 0)

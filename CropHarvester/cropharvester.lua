@@ -143,6 +143,10 @@ function Move(xAmount, yAmount)
                 yAmount = yAmount + 1
             end
         end
+        -- This turtle sucks
+        if x ~= barrelOffsetX and y ~= barrelOffsetY then
+            turtle.suckDown()
+        end
     end
 end
 
@@ -186,9 +190,6 @@ while true do
         for fy = 1, farmHeight, 1 do
             print("Harvesting row " .. fy .. ".")
             for fx = 1, farmWidth - 1, 1 do
-                if x ~= barrelOffsetX and y ~= barrelOffsetY then
-                    turtle.suckDown()
-                end
                 HarvestCrop()
                 if not flip then
                     Move(1, 0)

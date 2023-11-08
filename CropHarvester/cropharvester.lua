@@ -15,6 +15,7 @@ cooldown = 90
 x = 0 -- Left/right offset relative to home position (Higher = right)
 y = 0 -- Forward/back offset (Higher = forward)
 tomatoMaxAge = 3 -- Harvestable age of tomato crops
+netherWartMaxAxe = 3 -- Harvestable age of nether wart
 maxAge = 7 -- Harvestable age of generic crops
 lowFuelAmount = 50 -- Amount of fuel to stop harvesting when reached
 inventorySize = 16 -- Inventory size of turtle
@@ -44,6 +45,8 @@ function CurrentCropMaxAge()
 	blockName = blockData["name"]
 	if blockName == "farmersdelight:tomatoes" then
 		return tomatoMaxAge
+	elseif blockName == "minecraft:nether_wart" then
+		return netherWartMaxAge
 	else
 		return maxAge
 	end

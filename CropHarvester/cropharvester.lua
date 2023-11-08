@@ -3,11 +3,11 @@
 -- Below the starting position should be a barrel containing fuel. It will automatically grab from it when out of fuel.
 
 -- Farm details
-farmWidth = 13
+farmWidth = 14
 farmHeight = 9
 -- Position of output barrel relative to the home position
 -- For example, 1 block would be 1 block AWAY from the home position
-barrelOffsetX = 4
+barrelOffsetX = 5
 barrelOffsetY = 4
 -- Seconds between harvesting
 cooldown = 90
@@ -162,7 +162,9 @@ end
 -- Harvest crop
 function HarvestCrop()
     _, blockData = turtle.inspectDown()
-    if blockData["name"] ~= "minecraft:sugar_cane" then
+	if blockData["name"] == "minecraft:pumpkin" or blockData["name"] == "minecraft:melon" then
+		turtle.digDown()
+    elseif blockData["name"] ~= "minecraft:sugar_cane" then
         blockState = blockData["state"]
         if blockState ~= nil then
             cropAge = blockState["age"]
@@ -200,6 +202,7 @@ while true do
                     Move(-1, 0)
                 end
             end
+			HarvestCrop()
             flip = not flip
             if fy ~= farmHeight then
                 Move(0, 1)

@@ -1,0 +1,5 @@
+Mining turtle
+========================
+
+Place turtle facing second block up of growing bamboo.
+It will repeatedly farm the bamboo for refueling.
